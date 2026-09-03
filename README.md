@@ -1,8 +1,8 @@
-# Education Policy and Social Research Collective
+# Education Policy and Social Research Forum
 
 A static website for a casual academic student circle in Bloomington, USA, focused on education policy and social research.
 
-This collective is an unincorporated student forum. It is not an official institution, registered nonprofit organisation, corporation, or financial entity.
+This forum is an unincorporated student forum. It is not an official institution, registered nonprofit organisation, corporation, or financial entity.
 
 ## Local Preview
 

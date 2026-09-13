@@ -14,6 +14,22 @@
       "use": "@vercel/static"
     },
     {
+      "src": "content-store.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "admin.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "admin.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "admin.js",
+      "use": "@vercel/static"
+    },
+    {
       "src": "assets/**",
       "use": "@vercel/static"
     }
@@ -30,6 +46,26 @@
     {
       "src": "/script.js",
       "dest": "/script.js"
+    },
+    {
+      "src": "/content-store.js",
+      "dest": "/content-store.js"
+    },
+    {
+      "src": "/admin.css",
+      "dest": "/admin.css"
+    },
+    {
+      "src": "/admin.js",
+      "dest": "/admin.js"
+    },
+    {
+      "src": "/admin",
+      "dest": "/admin.html"
+    },
+    {
+      "src": "/admin.html",
+      "dest": "/admin.html"
     },
     {
       "src": "/(.*)",

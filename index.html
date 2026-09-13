@@ -18,11 +18,11 @@
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Education Policy and Social Research Forum">
+      <a class="brand" href="#home" aria-label="Education Policy and Social Research Forum" data-site-title-aria>
         <span class="brand-mark" aria-hidden="true">EP</span>
         <span>
-          <strong>Education Policy and Social Research Forum</strong>
-          <small>Bloomington, USA</small>
+          <strong data-site-title>Education Policy and Social Research Forum</strong>
+          <small data-site-location>Bloomington, USA</small>
         </span>
       </a>
 
@@ -36,6 +36,7 @@
         <a href="#profile">Profile</a>
         <a href="#research">Research</a>
         <a href="#publication">Article & Publication</a>
+        <a href="admin.html">Admin</a>
       </nav>
     </header>
 
@@ -46,20 +47,20 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="section-kicker">Bloomington student research forum</p>
-          <h1>Education Policy and Social Research Forum</h1>
-          <p class="hero-lede">
+          <p class="section-kicker" data-hero-kicker>Bloomington student research forum</p>
+          <h1 data-hero-title>Education Policy and Social Research Forum</h1>
+          <p class="hero-lede" data-hero-lead>
             A student-led community in Bloomington for people interested in education policy,
             social research, public ideas, and careful conversation.
           </p>
           <div class="hero-actions" aria-label="Primary links">
-            <a class="button primary" href="#profile">About the forum</a>
-            <a class="button secondary" href="#research">Discussion topics</a>
+            <a class="button primary" href="#profile" data-primary-action>About the forum</a>
+            <a class="button secondary" href="#research" data-secondary-action>Discussion topics</a>
           </div>
         </div>
       </section>
 
-      <section class="status-band" aria-label="Forum focus areas">
+      <section class="status-band" aria-label="Forum focus areas" data-focus-list>
         <article>
           <span>Education policy</span>
           <p>School governance, learning equity, teacher policy, accountability, and public education reform.</p>
@@ -76,11 +77,11 @@
 
       <section class="section profile-section" id="profile">
         <div class="section-heading">
-          <p class="section-kicker">Profile</p>
-          <h2>A quiet forum for students who want to think carefully together.</h2>
+          <p class="section-kicker" data-profile-kicker>Profile</p>
+          <h2 data-profile-title>A quiet forum for students who want to think carefully together.</h2>
         </div>
         <div class="profile-layout">
-          <div class="profile-text">
+          <div class="profile-text" data-profile-paragraphs>
             <p>
               Education Policy and Social Research Forum is a student community and
               casual academic forum in Bloomington, USA. It exists as a space to learn, read,
@@ -96,8 +97,8 @@
             </p>
           </div>
           <aside class="profile-note">
-            <span>Bloomington setting</span>
-            <p>
+            <span data-profile-note-title>Bloomington setting</span>
+            <p data-profile-note-body>
               We borrow the town's slower academic rhythm: walkable conversations, library
               notes, limestone buildings, autumn light, and research questions that mature
               through dialogue.
@@ -109,16 +110,16 @@
       <section class="section research-section" id="research">
         <div class="section-heading split">
           <div>
-            <p class="section-kicker">Research</p>
-            <h2>Questions we gather around.</h2>
+            <p class="section-kicker" data-research-kicker>Research</p>
+            <h2 data-research-title>Questions we gather around.</h2>
           </div>
-          <p>
+          <p data-research-intro>
             These topics are not framed as an official program. They are areas of shared
             interest that often become material for reading, discussion, and shared reflection.
           </p>
         </div>
 
-        <div class="research-grid">
+        <div class="research-grid" data-research-list>
           <article class="research-card">
             <span>01</span>
             <h3>Education policy and equity</h3>
@@ -145,16 +146,16 @@
       <section class="section publication-section" id="publication">
         <div class="publication-head">
           <div>
-            <p class="section-kicker">Article & Publication</p>
-            <h2>Notes, reading lists, and working drafts.</h2>
+            <p class="section-kicker" data-publication-kicker>Article & Publication</p>
+            <h2 data-publication-title>Notes, reading lists, and working drafts.</h2>
           </div>
-          <p>
+          <p data-publication-intro>
             Materials listed here are informal community outputs. They are shared for learning
             and discussion, not as institutional reports or paid products.
           </p>
         </div>
 
-        <div class="publication-list">
+        <div class="publication-list" data-publication-list>
           <article class="publication-item">
             <div>
               <span>Reading list</span>
@@ -182,12 +183,13 @@
 
     <footer class="site-footer">
       <div>
-        <strong>Education Policy and Social Research Forum</strong>
-        <p>Student community forum in Bloomington, USA. No official institutional, nonprofit, corporate, or financial function.</p>
+        <strong data-footer-title>Education Policy and Social Research Forum</strong>
+        <p data-footer-note>Student community forum in Bloomington, USA. No official institutional, nonprofit, corporate, or financial function.</p>
       </div>
-      <a href="mailto:hello@epsrforum.org">hello@epsrforum.org</a>
+      <a href="mailto:hello@eposrforum.study" data-footer-email>hello@eposrforum.study</a>
     </footer>
 
+    <script src="content-store.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

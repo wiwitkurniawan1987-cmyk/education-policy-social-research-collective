@@ -421,6 +421,21 @@ h3 {
   width: 100%;
 }
 
+.publication-photo.book-cover-feature {
+  align-items: center;
+  background: linear-gradient(145deg, var(--crimson-deep), var(--crimson) 58%, var(--gold));
+  display: flex;
+  justify-content: center;
+  padding: clamp(24px, 4vw, 48px);
+}
+
+.publication-photo.book-cover-feature img {
+  box-shadow: 0 18px 42px rgba(43, 27, 24, 0.35);
+  height: min(100%, 430px);
+  object-fit: contain;
+  width: auto;
+}
+
 .publication-feature > div:last-child {
   padding: clamp(22px, 3vw, 32px);
 }
@@ -444,6 +459,19 @@ h3 {
 .publication-feature p {
   color: var(--muted);
   margin: 14px 0 0;
+}
+
+.text-link {
+  color: var(--crimson);
+  display: inline-block;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.publication-feature h3 a:hover,
+.publication-item h3 a:hover,
+.text-link:hover {
+  color: var(--crimson);
 }
 
 .publication-item {
@@ -486,6 +514,110 @@ h3 {
 .site-footer a {
   color: #f1d6c4;
   font-weight: 800;
+}
+
+.article-header {
+  position: relative;
+}
+
+.back-link {
+  color: var(--crimson-deep);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.article-page {
+  background: var(--white);
+}
+
+.article-intro {
+  align-items: center;
+  background: linear-gradient(135deg, #fff8ea, var(--cream-strong));
+  display: grid;
+  gap: clamp(44px, 8vw, 110px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.38fr);
+  padding: clamp(64px, 9vw, 120px) clamp(20px, 8vw, 128px);
+}
+
+.article-intro h1 {
+  color: var(--ink);
+  font-size: clamp(3rem, 6.4vw, 6.5rem);
+  max-width: 980px;
+}
+
+.article-deck {
+  color: #604f46;
+  font-size: clamp(1.08rem, 1.7vw, 1.35rem);
+  margin: 26px 0 0;
+  max-width: 780px;
+}
+
+.book-details {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 38px 0 0;
+  padding-top: 24px;
+}
+
+.book-details dt {
+  color: var(--crimson);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.book-details dd {
+  font-weight: 700;
+  margin: 5px 0 0;
+}
+
+.article-cover {
+  margin: 0;
+}
+
+.article-cover img {
+  box-shadow: 0 24px 58px rgba(95, 20, 23, 0.24);
+  display: block;
+  margin: 0 auto;
+  max-height: 540px;
+  max-width: 100%;
+  width: auto;
+}
+
+.article-cover figcaption {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin: 14px auto 0;
+  max-width: 330px;
+}
+
+.article-body {
+  color: #493b34;
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(1.22rem, 1.75vw, 1.52rem);
+  line-height: 1.62;
+  margin: 0 auto;
+  max-width: 850px;
+  padding: clamp(70px, 10vw, 128px) 20px;
+}
+
+.article-body p {
+  margin: 0;
+}
+
+.article-body p + p {
+  margin-top: 1.35em;
+}
+
+.article-opening {
+  color: var(--crimson-deep);
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
+  font-weight: 650;
+  line-height: 1.28;
 }
 
 @media (max-width: 1060px) {
@@ -578,8 +710,13 @@ h3 {
   .section-heading.split,
   .publication-head,
   .publication-grid,
+  .article-intro,
   .research-grid {
     grid-template-columns: 1fr;
+  }
+
+  .article-cover {
+    max-width: 340px;
   }
 
   .status-band article {
@@ -613,6 +750,22 @@ h3 {
 
   .brand strong {
     max-width: 190px;
+  }
+
+  .article-header .brand strong {
+    display: none;
+  }
+
+  .article-header .brand {
+    min-width: auto;
+  }
+
+  .back-link {
+    font-size: 0.82rem;
+  }
+
+  .book-details {
+    grid-template-columns: 1fr;
   }
 
   .button {

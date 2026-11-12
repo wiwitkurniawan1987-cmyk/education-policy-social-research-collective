@@ -14,6 +14,14 @@
       "use": "@vercel/static"
     },
     {
+      "src": "wordpress*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "article.html",
+      "use": "@vercel/static"
+    },
+    {
       "src": "assets/**",
       "use": "@vercel/static"
     },
@@ -34,6 +42,14 @@
     {
       "src": "/script.js",
       "dest": "/script.js"
+    },
+    {
+      "src": "/wordpress(.*)\\.js",
+      "dest": "/wordpress$1.js"
+    },
+    {
+      "src": "/article.html",
+      "dest": "/article.html"
     },
     {
       "src": "/articles/(.*)",

@@ -396,6 +396,12 @@ h3 {
   border-top: 0;
 }
 
+.publication-status {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 18px 0 0;
+}
+
 .publication-grid {
   display: grid;
   gap: clamp(24px, 4vw, 48px);
@@ -618,6 +624,93 @@ h3 {
   font-size: clamp(1.55rem, 2.6vw, 2.15rem);
   font-weight: 650;
   line-height: 1.28;
+}
+
+.article-intro-no-cover {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.article-intro-no-cover .article-intro-copy {
+  max-width: 1050px;
+}
+
+.article-loading {
+  min-height: 64vh;
+}
+
+.wordpress-content > *:first-child {
+  margin-top: 0;
+}
+
+.wordpress-content h2,
+.wordpress-content h3,
+.wordpress-content h4 {
+  color: var(--ink);
+  font-family: Newsreader, Georgia, serif;
+  line-height: 1.12;
+  margin: 2em 0 0.65em;
+}
+
+.wordpress-content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.wordpress-content h3 {
+  font-size: clamp(1.45rem, 2.3vw, 2rem);
+}
+
+.wordpress-content a {
+  color: var(--crimson);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.wordpress-content img,
+.wordpress-content figure,
+.wordpress-content .wp-block-image {
+  height: auto;
+  max-width: 100%;
+}
+
+.wordpress-content figure {
+  margin: 2em 0;
+}
+
+.wordpress-content figcaption {
+  color: var(--muted);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.82rem;
+  margin-top: 8px;
+}
+
+.wordpress-content blockquote {
+  border-left: 4px solid var(--crimson);
+  color: var(--crimson-deep);
+  font-size: 1.18em;
+  margin: 2em 0;
+  padding-left: 1.2em;
+}
+
+.wordpress-content ul,
+.wordpress-content ol {
+  padding-left: 1.25em;
+}
+
+.article-error {
+  margin: 0 auto;
+  max-width: 900px;
+  min-height: 62vh;
+  padding: clamp(80px, 12vw, 150px) 20px;
+}
+
+.article-error h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.article-error > p:not(.section-kicker) {
+  color: var(--muted);
+  font-size: 1.15rem;
 }
 
 @media (max-width: 1060px) {

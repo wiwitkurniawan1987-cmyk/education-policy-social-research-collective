@@ -29,16 +29,17 @@ const formatDate = (date) => {
 const renderArticle = (post) => {
   const image = postImage(post);
   const author = post._embedded?.author?.[0]?.name || "EPSR Forum";
+  const title = plainText(post.title.rendered);
   const excerpt = plainText(post.excerpt.rendered);
 
-  document.title = `${plainText(post.title.rendered)} | EPSR Forum`;
+  document.title = `${title} | EPSR Forum`;
   document.querySelector('meta[name="description"]')?.setAttribute("content", excerpt || "Article from the Education Policy and Social Research Forum.");
 
   articleRoot.innerHTML = `
     <header class="article-intro ${image ? "" : "article-intro-no-cover"}">
       <div class="article-intro-copy">
         <p class="section-kicker">${postCategory(post)}</p>
-        <h1>${post.title.rendered}</h1>
+        <h1>${title}</h1>
         ${excerpt ? `<p class="article-deck">${excerpt}</p>` : ""}
         <dl class="book-details article-meta">
           <div><dt>Author</dt><dd>${author}</dd></div>

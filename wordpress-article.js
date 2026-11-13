@@ -5,7 +5,7 @@ const slug = new URLSearchParams(window.location.search).get("slug");
 const plainText = (html = "") => {
   const element = document.createElement("div");
   element.innerHTML = html;
-  return (element.textContent || "").trim();
+  return (element.textContent || "").replace(/\u00a0/g, " ").trim();
 };
 
 const postCategory = (post) => {
@@ -90,3 +90,4 @@ const loadArticle = async () => {
 
 loadArticle();
 eb262a54541c76a501eb82878544cd075362ef5e
+

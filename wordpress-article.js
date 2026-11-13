@@ -69,6 +69,12 @@ const loadArticle = async () => {
     return;
   }
 
+  // WordPress creates this sample post on a new site; keep it out of the public experience.
+  if (slug === "hello-world") {
+    window.location.replace("index.html#publication");
+    return;
+  }
+
   try {
     const response = await fetch(`${WORDPRESS_API}/posts?slug=${encodeURIComponent(slug)}&_embed`);
     if (!response.ok) throw new Error(`WordPress returned ${response.status}`);
@@ -82,3 +88,4 @@ const loadArticle = async () => {
 };
 
 loadArticle();
+eb262a54541c76a501eb82878544cd075362ef5e

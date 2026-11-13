@@ -11,7 +11,7 @@ const decodeEntities = (value = "") => {
 const plainText = (html = "") => {
   const element = document.createElement("div");
   element.innerHTML = html;
-  return (element.textContent || "").trim();
+  return (element.textContent || "").replace(/\u00a0/g, " ").trim();
 };
 
 const postCategory = (post) => {
@@ -96,3 +96,4 @@ const loadWordPressPosts = async () => {
 };
 
 loadWordPressPosts();
+

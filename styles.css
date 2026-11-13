@@ -403,6 +403,7 @@ h3 {
 }
 
 .publication-grid {
+  align-items: start;
   display: grid;
   gap: clamp(24px, 4vw, 48px);
   grid-template-columns: minmax(320px, 0.65fr) minmax(0, 1fr);
@@ -412,7 +413,10 @@ h3 {
 .publication-feature {
   background: var(--white);
   border: 1px solid rgba(143, 29, 33, 0.16);
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 18px 45px rgba(95, 20, 23, 0.1);
+  height: fit-content;
 }
 
 .publication-photo {
@@ -443,6 +447,7 @@ h3 {
 }
 
 .publication-feature > div:last-child {
+  flex: 1 1 auto;
   padding: clamp(22px, 3vw, 32px);
 }
 
@@ -464,6 +469,7 @@ h3 {
 
 .publication-feature p {
   color: var(--muted);
+  overflow-wrap: anywhere;
   margin: 14px 0 0;
 }
 

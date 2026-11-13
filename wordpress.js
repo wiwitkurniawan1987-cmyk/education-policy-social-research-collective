@@ -54,6 +54,9 @@ const featureMarkup = (post) => `
 
 const itemMarkup = (post) => `
   <article class="publication-item">
+    <a class="publication-item-photo" href="${postUrl(post)}">
+      <img src="${postImage(post)}" alt="" loading="lazy">
+    </a>
     <div>
       <span>${postCategory(post)}</span>
       <h3><a href="${postUrl(post)}">${plainText(post.title.rendered)}</a></h3>
@@ -64,6 +67,9 @@ const itemMarkup = (post) => `
 
 const legacyItem = `
   <article class="publication-item">
+    <a class="publication-item-photo" href="articles/american-philosophy-the-basics.html">
+      <img src="assets/american-philosophy-cover.png" alt="Cover of American Philosophy: The Basics" loading="lazy">
+    </a>
     <div>
       <span>Book discussion</span>
       <h3><a href="articles/american-philosophy-the-basics.html">Bedah Buku: <em>American Philosophy: The Basics</em></a></h3>

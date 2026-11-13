@@ -406,6 +406,7 @@ h3 {
   align-items: start;
   display: grid;
   gap: clamp(24px, 4vw, 48px);
+  grid-auto-rows: max-content;
   grid-template-columns: minmax(320px, 0.65fr) minmax(0, 1fr);
   margin-top: 42px;
 }
@@ -510,6 +511,7 @@ h3 {
 .site-footer {
   align-items: center;
   background: linear-gradient(135deg, var(--ink), var(--crimson-deep));
+  clear: both;
   color: var(--white);
   display: flex;
   gap: 24px;
@@ -540,6 +542,13 @@ h3 {
 
 .article-page {
   background: var(--white);
+}
+
+.article-page::after,
+.wordpress-content::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .article-intro {
@@ -701,6 +710,16 @@ h3 {
 .wordpress-content ul,
 .wordpress-content ol {
   padding-left: 1.25em;
+}
+
+.wordpress-content .alignleft {
+  float: left;
+  margin: 0 1.5em 1em 0;
+}
+
+.wordpress-content .alignright {
+  float: right;
+  margin: 0 0 1em 1.5em;
 }
 
 .article-error {

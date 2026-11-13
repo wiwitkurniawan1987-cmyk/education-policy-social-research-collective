@@ -410,6 +410,7 @@ h3 {
   grid-auto-rows: max-content;
   grid-template-columns: minmax(320px, 0.65fr) minmax(0, 1fr);
   margin-top: 42px;
+  overflow: auto;
 }
 
 .publication-feature {
@@ -493,8 +494,21 @@ h3 {
   border-bottom: 1px solid var(--line);
   display: grid;
   gap: 20px;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 132px minmax(0, 1fr) auto;
   padding: 28px 0;
+}
+
+.publication-item-photo {
+  aspect-ratio: 4 / 3;
+  background: var(--cream-strong);
+  display: block;
+  overflow: hidden;
+}
+
+.publication-item-photo img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .publication-item h3 {
@@ -859,6 +873,10 @@ h3 {
   .publication-item {
     align-items: start;
     grid-template-columns: 1fr;
+  }
+
+  .publication-item-photo {
+    max-width: 220px;
   }
 
   .site-footer {

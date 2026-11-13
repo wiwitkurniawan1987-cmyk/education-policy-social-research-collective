@@ -45,7 +45,7 @@ const featureMarkup = (post) => `
     </a>
     <div>
       <span>${postCategory(post)}</span>
-      <h3><a href="${postUrl(post)}">${post.title.rendered}</a></h3>
+      <h3><a href="${postUrl(post)}">${plainText(post.title.rendered)}</a></h3>
       <p>${plainText(post.excerpt.rendered)}</p>
       <a class="text-link" href="${postUrl(post)}">Read article <span aria-hidden="true">&rarr;</span></a>
     </div>
@@ -56,7 +56,7 @@ const itemMarkup = (post) => `
   <article class="publication-item">
     <div>
       <span>${postCategory(post)}</span>
-      <h3><a href="${postUrl(post)}">${post.title.rendered}</a></h3>
+      <h3><a href="${postUrl(post)}">${plainText(post.title.rendered)}</a></h3>
     </div>
     <time datetime="${post.date_gmt || post.date}">${postDate(post)}</time>
   </article>
